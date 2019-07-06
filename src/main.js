@@ -1,10 +1,13 @@
-import print from './print';
-import Vue from 'vue';
+import Vue from 'vue'
+import Router from '@views/router'
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+import App from './App.vue'
 
-document.write("hello world");
-print();
+Vue.use(Router)
+Vue.use(ElementUI)
 
-Vue.use()
-
-// Vue.prototype.$http = httpRequest  // ajax请求方法
-// Vue.prototype.isAuth = isAuth   // 权限方法
+new Vue({
+    el: '#app',
+    render: h => h(App)
+});
